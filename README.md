@@ -5,25 +5,23 @@ Tutorial para leer y trabajar con los datos de exposoma que **GEMMA**
 entrega a colaboradores de **ReDLat** (*The Multi-Partner Consortium to
 Expand Dementia Research in Latin America*).
 
-## Qué hay acá
+## Contenido
 
 - **[`gemma_redlat_tutorial.ipynb`](gemma_redlat_tutorial.ipynb)** — el
   tutorial completo: qué es GEMMA y su relación con ReDLat, cómo está
-  organizado el CSV que te entregan (`point_exposome_wide.csv`), qué
+  organizado el archivo de salida (`point_exposome_wide.csv`), qué
   significa cada radio de búsqueda (0/300/500/1000 m), y un tutorial
   práctico con pandas (cargar, filtrar, comparar, ancho↔largo). GitHub lo
-  renderiza directo en el navegador — no hace falta clonar nada ni tener
-  Jupyter instalado, con solo abrir el link de arriba.
-- **`assets/gemma_demo_worldmap.png`** — captura del explorador interactivo
-  de GEMMA (mapa mundi pixel-art, click para entrar a cada ciudad).
+  renderiza directo en el navegador — no hace falta clonar el repositorio ni
+  tener Jupyter instalado.
 
 ## Por qué este notebook y no el pipeline completo
 
-Este repositorio es deliberadamente chico: el notebook es **100%
+Este repositorio es deliberadamente acotado: el notebook es **100%
 autocontenido** (solo `pandas`/`numpy`/`matplotlib`, sin ninguna
-dependencia del código interno de GEMMA) y todos sus ejemplos corren sobre
-un DataFrame **sintético** (participantes `EJ001`/`EJ002`/`EJ003`,
-inventados) — nunca sobre datos reales de participantes.
+dependencia del código interno de GEMMA) y todos sus ejemplos se ejecutan
+sobre un DataFrame **sintético** (participantes `EJ001`/`EJ002`/`EJ003`,
+ficticios) — nunca sobre datos reales de participantes.
 
 El pipeline de GEMMA (geocodificación, extracción de exposoma, la cohorte en
 sí) es privado y vive en otro repositorio de BrainLat. Este tutorial es lo
@@ -32,16 +30,16 @@ reutiliza cada vez que BrainLat entrega una descarga nueva.
 
 ## Cómo usarlo
 
-1. Abrí [`gemma_redlat_tutorial.ipynb`](gemma_redlat_tutorial.ipynb) acá en
-   GitHub para leerlo directo, o cloná el repo y abrilo en Jupyter/VS Code
-   si preferís correr las celdas vos mismo (necesita Python 3.10+ con
+1. Abrir [`gemma_redlat_tutorial.ipynb`](gemma_redlat_tutorial.ipynb) en
+   GitHub para leerlo directo, o clonar el repositorio y abrirlo en
+   Jupyter/VS Code para ejecutar las celdas (requiere Python 3.10+ con
    `pandas`, `numpy`, `matplotlib`).
-2. Cuando tengas tu propio `point_exposome_wide.csv`, reemplazá el
-   DataFrame de ejemplo (`example_wide`) por
+2. Al recibir el archivo `point_exposome_wide.csv` correspondiente,
+   sustituir el DataFrame de ejemplo (`example_wide`) por
    `pd.read_csv("point_exposome_wide.csv", dtype={"record_id": str})` y
-   segui los mismos pasos con tus datos reales.
+   continuar con los mismos pasos sobre los datos reales.
 
 ## Contacto
 
-Para pedir una entrega nueva o una actualización, escribile al equipo de
-BrainLat/GEMMA que te compartió tus datos.
+Para solicitar una entrega nueva o una actualización, contactar al equipo
+de BrainLat/GEMMA correspondiente.
